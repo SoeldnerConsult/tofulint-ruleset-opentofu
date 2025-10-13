@@ -164,13 +164,15 @@ func (r *TerraformStandardModuleStructureRule) checkFiles(runner tflint.Runner, 
 	return nil
 }
 
+// bevorzugt .tofu – akzeptiere aber auch .tf
 func (r *TerraformStandardModuleStructureRule) checkVariables(runner tflint.Runner, variables hclext.Blocks) error {
 	for _, variable := range variables {
 		filename := variable.DefRange.Filename
-		if r.shouldMove(filename, filenameTofuVariables) || r.shouldMove(filename, filenameVariables) {
-			target := filenameVariables
-			if r.shouldMove(filename, filenameTofuVariables) {
-				target = filenameTofuVariables
+
+		if r.shouldMove(filename, filenameVariables) || r.shouldMove(filename, filenameTofuVariables) {
+			target := filenameTofuVariables
+			if filepath.Ext(filename) == ".tofu" {
+				target = filenameVariables
 			}
 
 			if err := runner.EmitIssue(
@@ -188,10 +190,11 @@ func (r *TerraformStandardModuleStructureRule) checkVariables(runner tflint.Runn
 func (r *TerraformStandardModuleStructureRule) checkOutputs(runner tflint.Runner, outputs hclext.Blocks) error {
 	for _, output := range outputs {
 		filename := output.DefRange.Filename
-		if r.shouldMove(filename, filenameTofuOutputs) || r.shouldMove(filename, filenameOutputs) {
-			target := filenameOutputs
-			if r.shouldMove(filename, filenameTofuOutputs) {
-				target = filenameTofuOutputs
+
+		if r.shouldMove(filename, filenameOutputs) || r.shouldMove(filename, filenameTofuOutputs) {
+			target := filenameTofuOutputs
+			if filepath.Ext(filename) == ".tofu" {
+				target = filenameOutputs
 			}
 
 			if err := runner.EmitIssue(
