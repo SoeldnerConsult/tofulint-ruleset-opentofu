@@ -14,8 +14,8 @@ github.com/agext/levenshtein v1.2.1 h1:QmvMAjj2aEICytGiWzmxoE0x2KZvE0fvmqMOfy2tj
 github.com/agext/levenshtein v1.2.1/go.mod h1:JEDfjyjHDjOF/1e4FlBE/PkbqA9OfWu2ki2W0IB5558=
 github.com/apparentlymart/go-textseg/v15 v15.0.0 h1:uYvfpb3DyLSCGWnctWKGj857c6ew1u1fNQOlOtuGxQY=
 github.com/apparentlymart/go-textseg/v15 v15.0.0/go.mod h1:K8XmNZdhEBkdlyDdvbmmsvpAG721bKi0joRfFdHIWJ4=
-github.com/arsiba/tofulint-plugin-sdk v0.0.0-20251013114027-99444a2b3034 h1:i0TmCJ8FeJi3bNSRGfnBqRh4EsjmD5E+loaeQHpDkNA=
-github.com/arsiba/tofulint-plugin-sdk v0.0.0-20251013114027-99444a2b3034/go.mod h1:kcJPp/tr/y0Pl/MxBb9rByicX0VlRNpjeT4rCtt30fE=
+github.com/arsiba/tofulint-plugin-sdk v0.0.2 h1:gr5hArqAYuyZNuKhE3uKKZ4wS2e2rvLLEj+Gr5BKjW8=
+github.com/arsiba/tofulint-plugin-sdk v0.0.2/go.mod h1:kcJPp/tr/y0Pl/MxBb9rByicX0VlRNpjeT4rCtt30fE=
 github.com/aws/aws-sdk-go-v2 v1.36.3 h1:mJoei2CxPutQVxaATCzDUjcZEjVRdpsiiXi2o38yqWM=
 github.com/aws/aws-sdk-go-v2 v1.36.3/go.mod h1:LLXuLpgzEbD766Z5ECcRmi8AzSwfZItDtmABVkRLGzg=
 github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream v1.6.10 h1:zAybnyUQXIZ5mok5Jqwlf58/TFE7uvd3IAsa1aF9cXs=

@@ -4,7 +4,7 @@ go 1.24.5
 
 require (
 	github.com/Masterminds/semver/v3 v3.4.0
-	github.com/arsiba/tofulint-plugin-sdk v0.0.0-20251013114027-99444a2b3034
+	github.com/arsiba/tofulint-plugin-sdk v0.0.2
 	github.com/google/go-cmp v0.7.0
 	github.com/hashicorp/go-getter v1.8.2
 	github.com/hashicorp/go-version v1.7.0
