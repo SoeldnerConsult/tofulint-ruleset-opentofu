@@ -7,10 +7,10 @@ import (
 	"strings"
 
 	"github.com/Masterminds/semver/v3"
+	"github.com/arsiba/tofulint-plugin-sdk/tflint"
 	"github.com/arsiba/tofulint-ruleset-opentofu/project"
 	"github.com/arsiba/tofulint-ruleset-opentofu/terraform"
 	"github.com/hashicorp/go-getter"
-	"github.com/terraform-linters/tflint-plugin-sdk/tflint"
 )
 
 // TerraformModulePinnedSourceRule checks unpinned or default version module source

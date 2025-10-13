@@ -3,13 +3,13 @@ package rules
 import (
 	"fmt"
 
+	"github.com/arsiba/tofulint-plugin-sdk/hclext"
+	"github.com/arsiba/tofulint-plugin-sdk/terraform/addrs"
+	"github.com/arsiba/tofulint-plugin-sdk/terraform/lang"
+	"github.com/arsiba/tofulint-plugin-sdk/tflint"
 	"github.com/arsiba/tofulint-ruleset-opentofu/project"
 	"github.com/arsiba/tofulint-ruleset-opentofu/terraform"
 	"github.com/hashicorp/hcl/v2"
-	"github.com/terraform-linters/tflint-plugin-sdk/hclext"
-	"github.com/terraform-linters/tflint-plugin-sdk/terraform/addrs"
-	"github.com/terraform-linters/tflint-plugin-sdk/terraform/lang"
-	"github.com/terraform-linters/tflint-plugin-sdk/tflint"
 )
 
 // TerraformUnusedDeclarationsRule checks whether variables, data sources, or locals are declared but unused

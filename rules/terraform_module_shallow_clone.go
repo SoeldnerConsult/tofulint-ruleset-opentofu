@@ -7,11 +7,11 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/arsiba/tofulint-plugin-sdk/tflint"
 	"github.com/arsiba/tofulint-ruleset-opentofu/project"
 	"github.com/arsiba/tofulint-ruleset-opentofu/terraform"
 	"github.com/hashicorp/go-getter"
 	"github.com/hashicorp/hcl/v2"
-	"github.com/terraform-linters/tflint-plugin-sdk/tflint"
 )
 
 var gitCommitRegex = regexp.MustCompile("^[a-f0-9]{4,64}$")
