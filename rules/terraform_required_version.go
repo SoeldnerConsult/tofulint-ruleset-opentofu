@@ -3,10 +3,10 @@ package rules
 import (
 	"path/filepath"
 
+	"github.com/arsiba/tofulint-plugin-sdk/hclext"
+	"github.com/arsiba/tofulint-plugin-sdk/tflint"
 	"github.com/arsiba/tofulint-ruleset-opentofu/project"
 	"github.com/hashicorp/hcl/v2"
-	"github.com/terraform-linters/tflint-plugin-sdk/hclext"
-	"github.com/terraform-linters/tflint-plugin-sdk/tflint"
 )
 
 // TerraformRequiredVersionRule checks whether a terraform version has required_version attribute

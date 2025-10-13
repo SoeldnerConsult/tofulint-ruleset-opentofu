@@ -3,8 +3,8 @@ package rules
 import (
 	"testing"
 
+	"github.com/arsiba/tofulint-plugin-sdk/helper"
 	"github.com/hashicorp/hcl/v2"
-	"github.com/terraform-linters/tflint-plugin-sdk/helper"
 )
 
 func Test_TerraformRequiredProvidersRule(t *testing.T) {

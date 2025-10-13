@@ -1,11 +1,11 @@
 package terraform
 
 import (
+	"github.com/arsiba/tofulint-plugin-sdk/hclext"
 	"github.com/hashicorp/go-version"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/gohcl"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
-	"github.com/terraform-linters/tflint-plugin-sdk/hclext"
 )
 
 // ModuleCall represents a "module" block.
