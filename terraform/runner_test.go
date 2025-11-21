@@ -3,8 +3,8 @@ package terraform
 import (
 	"testing"
 
-	"github.com/arsiba/tofulint-plugin-sdk/hclext"
-	"github.com/arsiba/tofulint-plugin-sdk/helper"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/hclext"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/helper"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/hashicorp/go-version"

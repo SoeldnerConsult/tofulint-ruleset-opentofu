@@ -3,9 +3,9 @@ package rules
 import (
 	"fmt"
 
-	"github.com/arsiba/tofulint-plugin-sdk/logger"
-	"github.com/arsiba/tofulint-plugin-sdk/tflint"
-	"github.com/arsiba/tofulint-ruleset-opentofu/project"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/logger"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/tflint"
+	"github.com/SoeldnerConsult/tofulint-ruleset-opentofu/project"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
 	"github.com/zclconf/go-cty/cty"
@@ -71,7 +71,7 @@ func (r *TerraformMapDuplicateKeysRule) checkObjectConsExpr(e hcl.Expression, ru
 		var val cty.Value
 
 		// There is an issue with the SDK's EvaluateExpr not being able to evaluate naked identifiers of map keys, so we will handle this here.
-		// @see https://github.com/arsiba/tofulint-plugin-sdk/issues/338
+		// @see https://github.com/SoeldnerConsult/tofulint-plugin-sdk/issues/338
 		//
 		// Checks whether the key expression can be extracted as a keyword and retrieves its value in the same way as ObjectConsKeyExpr.Value.
 		// @see https://github.com/hashicorp/hcl/blob/v2.21.0/hclsyntax/expression.go#L1311
@@ -82,7 +82,7 @@ func (r *TerraformMapDuplicateKeysRule) checkObjectConsExpr(e hcl.Expression, ru
 			if err != nil {
 				// When a key fails to evaluate, ignore the key and continue processing rather than terminating with an error.
 				// This is due to a limitation that expressions with different scopes, such as for expressions, cannot be evaluated.
-				// @see https://github.com/arsiba/tofulint-ruleset-opentofu/issues/199
+				// @see https://github.com/SoeldnerConsult/tofulint-ruleset-opentofu/issues/199
 				logger.Debug("Failed to evaluate key. The key will be ignored", "range", expr.Range(), "error", err.Error())
 				continue
 			}

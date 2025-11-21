@@ -1,8 +1,8 @@
 package rules
 
 import (
-	"github.com/arsiba/tofulint-plugin-sdk/tflint"
-	"github.com/arsiba/tofulint-ruleset-opentofu/project"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/tflint"
+	"github.com/SoeldnerConsult/tofulint-ruleset-opentofu/project"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
 )

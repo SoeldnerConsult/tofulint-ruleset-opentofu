@@ -7,9 +7,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/arsiba/tofulint-plugin-sdk/tflint"
-	"github.com/arsiba/tofulint-ruleset-opentofu/project"
-	"github.com/arsiba/tofulint-ruleset-opentofu/terraform"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/tflint"
+	"github.com/SoeldnerConsult/tofulint-ruleset-opentofu/project"
+	"github.com/SoeldnerConsult/tofulint-ruleset-opentofu/terraform"
 	"github.com/hashicorp/go-getter"
 	"github.com/hashicorp/hcl/v2"
 )

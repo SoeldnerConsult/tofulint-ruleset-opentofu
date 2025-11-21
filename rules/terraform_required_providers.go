@@ -3,11 +3,11 @@ package rules
 import (
 	"fmt"
 
-	"github.com/arsiba/tofulint-plugin-sdk/hclext"
-	tfsdk "github.com/arsiba/tofulint-plugin-sdk/terraform"
-	"github.com/arsiba/tofulint-plugin-sdk/tflint"
-	"github.com/arsiba/tofulint-ruleset-opentofu/project"
-	"github.com/arsiba/tofulint-ruleset-opentofu/terraform"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/hclext"
+	tfsdk "github.com/SoeldnerConsult/tofulint-plugin-sdk/terraform"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/tflint"
+	"github.com/SoeldnerConsult/tofulint-ruleset-opentofu/project"
+	"github.com/SoeldnerConsult/tofulint-ruleset-opentofu/terraform"
 	"github.com/hashicorp/hcl/v2"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
 	"github.com/zclconf/go-cty/cty"

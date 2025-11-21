@@ -1,6 +1,6 @@
 package rules
 
-import "github.com/arsiba/tofulint-plugin-sdk/tflint"
+import "github.com/SoeldnerConsult/tofulint-plugin-sdk/tflint"
 
 var PresetRules = map[string][]tflint.Rule{
 	"all": {

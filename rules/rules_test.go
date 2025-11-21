@@ -3,8 +3,8 @@ package rules
 import (
 	"testing"
 
-	"github.com/arsiba/tofulint-plugin-sdk/helper"
-	"github.com/arsiba/tofulint-ruleset-opentofu/terraform"
+	"github.com/SoeldnerConsult/tofulint-plugin-sdk/helper"
+	"github.com/SoeldnerConsult/tofulint-ruleset-opentofu/terraform"
 )
 
 func testRunner(t *testing.T, files map[string]string) *terraform.Runner {

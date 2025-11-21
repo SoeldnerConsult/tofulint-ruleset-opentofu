@@ -70,7 +70,7 @@ See https://github.com/terraform-linters/tflint-ruleset-terraform/releases for l
 
 ### Chores
 
-- [#160](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/160) [#171](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/171): Bump github.com/arsiba/tofulint-plugin-sdk from 0.18.0 to 0.20.0
+- [#160](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/160) [#171](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/171): Bump github.com/SoeldnerConsult/tofulint-plugin-sdk from 0.18.0 to 0.20.0
 - [#162](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/162) [#166](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/166): Bump github.com/zclconf/go-cty from 1.14.2 to 1.14.4
 - [#165](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/165): Bump google.golang.org/protobuf from 1.31.0 to 1.33.0
 - [#168](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/168): Bump golang.org/x/net from 0.21.0 to 0.23.0
@@ -113,7 +113,7 @@ See https://github.com/terraform-linters/tflint-ruleset-terraform/releases for l
 
 - [#106](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/106) [#117](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/117): Bump github.com/hashicorp/terraform-registry-address from 0.2.0 to 0.2.2
 - [#108](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/108): Bump github.com/hashicorp/go-getter from 1.7.1 to 1.7.2
-- [#109](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/109): Bump github.com/arsiba/tofulint-plugin-sdk from 0.17.0 to 0.18.0
+- [#109](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/109): Bump github.com/SoeldnerConsult/tofulint-plugin-sdk from 0.17.0 to 0.18.0
 - [#114](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/114): Add raw binary entries to checksums.txt
 - [#115](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/115): Fix typo in rule documentation
 - [#122](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/122) [#123](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/123) [#137](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/137): Bump github.com/zclconf/go-cty from 1.13.2 to 1.14.1
@@ -173,7 +173,7 @@ See https://github.com/terraform-linters/tflint-ruleset-terraform/releases for l
 - [#78](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/78): Bump sigstore/cosign-installer from 2 to 3
 - [#80](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/80): Bump actions/setup-go from 3 to 4
 - [#83](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/83): Bump github.com/hashicorp/terraform-registry-address from 0.1.0 to 0.2.0
-- [#85](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/85) [#88](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/88): Bump github.com/arsiba/tofulint-plugin-sdk from 0.15.0 to 0.16.1
+- [#85](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/85) [#88](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/88): Bump github.com/SoeldnerConsult/tofulint-plugin-sdk from 0.15.0 to 0.16.1
 - [#87](https://github.com/terraform-linters/tflint-ruleset-terraform/pull/87): Bump github.com/Masterminds/semver/v3 from 3.2.0 to 3.2.1
 
 ## 0.2.2 (2022-12-26)

@@ -1,4 +1,4 @@
-module github.com/arsiba/tofulint-ruleset-opentofu/tools/release
+module github.com/SoeldnerConsult/tofulint-ruleset-opentofu/tools/release
 
 go 1.24.1
 
