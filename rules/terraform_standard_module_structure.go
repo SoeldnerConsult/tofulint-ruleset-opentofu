@@ -164,20 +164,19 @@ func (r *TerraformStandardModuleStructureRule) checkFiles(runner tflint.Runner, 
 	return nil
 }
 
-// bevorzugt .tofu – akzeptiere aber auch .tf
 func (r *TerraformStandardModuleStructureRule) checkVariables(runner tflint.Runner, variables hclext.Blocks) error {
 	for _, variable := range variables {
 		filename := variable.DefRange.Filename
 
-		if r.shouldMove(filename, filenameVariables) || r.shouldMove(filename, filenameTofuVariables) {
-			target := filenameTofuVariables
-			if filepath.Ext(filename) == ".tofu" {
-				target = filenameVariables
-			}
+		isVariablesTF := filepath.Base(filename) == filenameVariables
+		isVariablesTOFU := filepath.Base(filename) == filenameTofuVariables
+
+		if !isVariablesTF && !isVariablesTOFU && filepath.Ext(filename) != ".json" {
+			issueMsg := fmt.Sprintf("variable %q should be moved from %s to one of %s or %s", variable.Labels[0], filepath.Base(filename), filenameTofuVariables, filenameVariables)
 
 			if err := runner.EmitIssue(
 				r,
-				fmt.Sprintf("variable %q should be moved from %s to %s", variable.Labels[0], filename, target),
+				issueMsg,
 				variable.DefRange,
 			); err != nil {
 				return err
@@ -191,15 +190,14 @@ func (r *TerraformStandardModuleStructureRule) checkOutputs(runner tflint.Runner
 	for _, output := range outputs {
 		filename := output.DefRange.Filename
 
-		if r.shouldMove(filename, filenameOutputs) || r.shouldMove(filename, filenameTofuOutputs) {
-			target := filenameTofuOutputs
-			if filepath.Ext(filename) == ".tofu" {
-				target = filenameOutputs
-			}
+		isOutputsTF := filepath.Base(filename) == filenameOutputs
+		isOutputsTOFU := filepath.Base(filename) == filenameTofuOutputs
+		if !isOutputsTF && !isOutputsTOFU && filepath.Ext(filename) != ".json" {
+			issueMsg := fmt.Sprintf("output %q should be moved from %s to one of %s or %s", output.Labels[0], filepath.Base(filename), filenameTofuOutputs, filenameOutputs)
 
 			if err := runner.EmitIssue(
 				r,
-				fmt.Sprintf("output %q should be moved from %s to %s", output.Labels[0], filename, target),
+				issueMsg,
 				output.DefRange,
 			); err != nil {
 				return err
