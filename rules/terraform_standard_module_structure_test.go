@@ -68,21 +68,6 @@ variable "v" {}
 						Start:    hcl.InitialPos,
 					},
 				},
-				{
-					Rule:    NewTerraformStandardModuleStructureRule(),
-					Message: `variable "v" should be moved from foo/variables.tf to variables.tofu`,
-					Range: hcl.Range{
-						Filename: "foo/variables.tf",
-						Start: hcl.Pos{
-							Line:   2,
-							Column: 1,
-						},
-						End: hcl.Pos{
-							Line:   2,
-							Column: 13,
-						},
-					},
-				},
 			},
 		},
 		{
@@ -97,7 +82,7 @@ variable "v" {}
 			Expected: helper.Issues{
 				{
 					Rule:    NewTerraformStandardModuleStructureRule(),
-					Message: `variable "v" should be moved from main.tf to variables.tofu`,
+					Message: `variable "v" should be moved from main.tf to one of variables.tofu or variables.tf`,
 					Range: hcl.Range{
 						Filename: "main.tf",
 						Start: hcl.Pos{
@@ -124,7 +109,7 @@ output "o" { value = null }
 			Expected: helper.Issues{
 				{
 					Rule:    NewTerraformStandardModuleStructureRule(),
-					Message: `output "o" should be moved from main.tf to outputs.tofu`,
+					Message: `output "o" should be moved from main.tf to one of outputs.tofu or outputs.tf`,
 					Range: hcl.Range{
 						Filename: "main.tf",
 						Start: hcl.Pos{
