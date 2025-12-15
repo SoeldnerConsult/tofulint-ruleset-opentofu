@@ -9,12 +9,12 @@ This ruleset focus on possible errors and best practices about Terraform Languag
 
 ## Requirements
 
-- TFLint v0.42+
+- TofuLint v0.0.3+
 - Go v1.24
 
 ## Installation
 
-This ruleset is built into TFLint, so you usually don't need to worry about how to install it. You can check the built-in version with `tflint -v`:
+This ruleset is built into TFLint, so you usually don't need to worry about how to install it. You can check the built-in version with `tofulint -v`:
 
 ```
 $ tflint -v
@@ -22,12 +22,12 @@ TFLint version 0.52.0
 + ruleset.terraform (0.8.0-bundled)
 ```
 
-If you want to use a version different from the built-in version, you can declare `plugin` in `.tflint.hcl` as follows and install it with `tflint --init`:
+If you want to use a version different from the built-in version, you can declare `plugin` in `.tflint.hcl` as follows and install it with `tofulint --init`:
 
 ```hcl
-plugin "terraform" {
+plugin "opentofu" {
     enabled = true
-    version = "0.13.0"
+    version = "0.0.9"
     source  = "github.com/SoeldnerConsult/tofulint-ruleset-opentofu"
 }
 ```
@@ -55,7 +55,7 @@ $ make install
 Note that if you install the plugin with `make install`, you must omit the `version` and `source` attributes in` .tflint.hcl`:
 
 ```hcl
-plugin "terraform" {
+plugin "opentofu" {
     enabled = true
 }
 ```
